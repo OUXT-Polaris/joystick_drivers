@@ -29,7 +29,7 @@
 
 // On Windows, we have to be sure that SDL doesn't generate its own main.
 #define SDL_MAIN_HANDLED
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include <cstdio>
 #include <stdexcept>

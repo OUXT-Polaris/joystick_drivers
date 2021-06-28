@@ -50,6 +50,7 @@ install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/SDL2/ DESTINATION ${CMAKE_INSTALL_
 
 install(DIRECTORY cmake DESTINATION share/${PROJECT_NAME})
 
+ament_export_include_directories(include)
 ament_package(
   CONFIG_EXTRAS "sdl2_vendor-extras.cmake"
 )

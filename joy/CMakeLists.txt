@@ -22,9 +22,8 @@ add_library(joy SHARED src/joy.cpp)
 ament_target_dependencies(joy
   "rclcpp_components"
   "rclcpp"
-  "sensor_msgs")
-# Need this since sdl2 doesn't properly export its
-# libraries so ament_target_dependencies can find them
+  "sensor_msgs"
+  "sdl2_vendor")
 target_link_libraries(joy
   SDL2::SDL2)
 
