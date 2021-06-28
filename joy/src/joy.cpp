@@ -124,6 +124,11 @@ Joy::~Joy()
   SDL_Quit();
 }
 
+void Joy::colorCb(const std::shared_ptr<std_msgs::msg::ColorRGBA> msg)
+{
+  SDL_JoystickSetLED(joystick_, msg->r, msg->g, msg->b);
+}
+
 void Joy::feedbackCb(const std::shared_ptr<sensor_msgs::msg::JoyFeedback> msg)
 {
   if (haptic_ == nullptr) {

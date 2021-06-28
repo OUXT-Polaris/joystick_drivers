@@ -35,6 +35,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/joy.hpp>
 #include <sensor_msgs/msg/joy_feedback.hpp>
+#include <std_msgs/msg/color_rgba.hpp>
 
 #include <future>
 #include <memory>
@@ -65,6 +66,7 @@ private:
   void handleJoyDeviceRemoved(const SDL_Event & e);
   float convertRawAxisValueToROS(int16_t val);
   void feedbackCb(const std::shared_ptr<sensor_msgs::msg::JoyFeedback> msg);
+  void colorCb(const std::shared_ptr<std_msgs::msg::ColorRGBA> msg);
 
   int dev_id_{0};
 
